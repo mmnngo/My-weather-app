@@ -1,0 +1,88 @@
+body {
+  margin: 30px 5px;
+  color: rgb(4, 163, 255);
+}
+h1 {
+  font-size: 42px;
+  margin: 0 14px;
+  width: 25%;
+  display: inline;
+  position: relative;
+  top: 36px;
+  left: 8px;
+}
+h4 {
+  display: inline;
+}
+h6 {
+  margin-bottom: 0px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: inline;
+}
+p {
+  margin-bottom: 0;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.form-control {
+  color: #212529;
+  background-color: rgb(230, 221, 221);
+  max-width: 100%;
+  margin: 0 auto;
+  left: 25px;
+  position: relative;
+}
+
+.col-6 {
+  display: inline;
+  text-align: right;
+  position: relative;
+  top: 25px;
+}
+.col-3 {
+  padding: 0 5px;
+  position: relative;
+  top: 25px;
+  right: 10px;
+  width: 21%;
+}
+
+.current-date {
+  color: black;
+  position: relative;
+  top: 30px;
+  left: 25px;
+}
+.current-high-low {
+  display: inline;
+  text-align: right;
+  margin: -20px 30px 30px 22px;
+  font-size: 16px;
+}
+.city-temperature {
+  font-size: 42px;
+  position: relative;
+  top: 36px;
+}
+.units {
+  font-size: 14px;
+  position: relative;
+  top: 18px;
+}
+.col-2 {
+  text-align: center;
+  width: 19.67%;
+}
+.emoji {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
