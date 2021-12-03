@@ -20,7 +20,8 @@
       <div class="card">
         <div class="row">
           <div class="col-6">
-            <form id="search-form">
+          <form id="search-form">
+              
               <input
               type="search"
               autofocus="on"
@@ -30,6 +31,7 @@
               id="enter-city-input"
               />
             </div>
+              
             <div class="col-3">
               <input
               type="submit"
@@ -46,42 +48,38 @@
               id="current-location"
               />
             </div>
-
           </form>
+
             
-          
-          <div class="current-date">
-            <p id="date">Sun., October 9th 10:00pm</p>
-          </div>
-          
         </div>
-        <span>
-          <h1 id="city-input">
-            
-          </h1>  
-          <span class ="city-temperature" id="city-temperature">
-            
-          </span>
-              <span class="units">
-                <a href="#" id="celsius-link">
-                  °C
-                </a>
-                 |
+          
+          <p class="current-date" id="date"></p>
+          <div class="row">
+
+            <div class="col-9">
+              <h1 class ="city-input" id="city-input">  
+              </h1>  
+              <span class ="city-temperature" id="city-temperature"></span> 
+              <span class="units"> <a href="#" id="celsius-link"> °C</a> |
                 <a href="#" id="fahrenheit-link">
                   °F
-                </a>
+                </a></span>
+                
               </span>
-        </span>
-        
-        <span class="current-high-low">
-          <h4>
-            Partly Cloudy
-          </h4>
-          <p id="current-high-low">
-            24°/ 12° ☁️
-          </p>
-        </span>
-        
+            </div>  
+            <div class="col-3">
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clear" id="icon" class="icon" />
+            </div>
+          </div>
+              <ul class="current-high-low">
+                <li id="weather-description">  
+                </li>
+                <li id="current-high-low">
+                  °/ ° 
+                </li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/hr</li>
+              </ul>  
         <hr />
         <div class="row">
           <div class="col-2">

@@ -3,7 +3,7 @@ body {
   color: rgb(4, 163, 255);
 }
 h1 {
-  font-size: 42px;
+  font-size: 40px;
   margin: 0 14px;
   width: 25%;
   display: inline;
@@ -11,9 +11,7 @@ h1 {
   top: 36px;
   left: 8px;
 }
-h4 {
-  display: inline;
-}
+
 h6 {
   margin-bottom: 0px;
 }
@@ -22,8 +20,13 @@ ul {
   padding: 0;
   display: inline;
 }
+
 p {
   margin-bottom: 0;
+}
+
+.container {
+  max-width: 600px;
 }
 
 .card {
@@ -44,7 +47,6 @@ p {
 
 .col-6 {
   display: inline;
-  text-align: right;
   position: relative;
   top: 25px;
 }
@@ -61,26 +63,25 @@ p {
   position: relative;
   top: 30px;
   left: 25px;
+  max-width: 91%;
 }
 .current-high-low {
-  display: inline;
-  text-align: right;
   margin: -20px 30px 30px 22px;
-  font-size: 16px;
-}
-.city-temperature {
-  font-size: 42px;
-  position: relative;
-  top: 36px;
-}
-.units {
   font-size: 14px;
-  position: relative;
-  top: 18px;
+}
+#weather-description {
+  text-transform: capitalize;
 }
 .col-2 {
   text-align: center;
   width: 19.67%;
+}
+
+.icon {
+  position: relative;
+  left: 8px;
+  top: -16px;
+  padding: 0;
 }
 .emoji {
   margin-bottom: 15px;
