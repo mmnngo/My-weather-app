@@ -55,10 +55,12 @@
           
           <p class="current-date" id="date"></p>
           <div class="row">
-
-            <div class="col-9">
+            <div class="col-8">
               <h1 class ="city-input" id="city-input">  
               </h1>  
+            </div>  
+            <div class="col-4">
+
               <span class ="city-temperature" id="city-temperature"></span> 
               <span class="units"> <a href="#" id="celsius-link"> °C</a> |
                 <a href="#" id="fahrenheit-link">
@@ -66,11 +68,11 @@
                 </a></span>
                 
               </span>
-            </div>  
-            <div class="col-3">
-              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clear" id="icon" class="icon" />
             </div>
           </div>
+          <div class="row">
+
+            <div class="col-8">
               <ul class="current-high-low">
                 <li id="weather-description">  
                 </li>
@@ -80,7 +82,12 @@
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/hr</li>
               </ul>  
-        <hr />
+            </div>
+            <div class="col-4">
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clear" id="icon" class="icon" />
+            </div>
+          </div>
+          <hr />
         <div class="row">
           <div class="col-2">
             <h6>Mon</h6>
