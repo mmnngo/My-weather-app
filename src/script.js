@@ -61,6 +61,7 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  celsiusTemperature = response.data.main.temp;
 }
 function searchCity(city) {
   let apiKey = "65b5662e22ff1bb3952c072792011a99";
@@ -93,12 +94,17 @@ function getCurrentPosition(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#city-temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#city-temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
@@ -119,5 +125,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemperature = null;
 
 searchCity("New York");
