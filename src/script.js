@@ -37,23 +37,36 @@ function formatDate(date) {
 
   return `${currentDay}, ${currentMonth} ${date}, ${currentTime}`;
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu"];
-  days.forEach(function (days) {
-    forecastHTML =
-      forecastHTML +
-      `
-    <div class="col-2">
-    <h6 class="weather-forecast-date">${days}</h6>
-    <span class="weather-forecast-temperature-max">24° </span>
-    / 
-    <span class="weather-forecast-temperature-min">
-    12°</span>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="42px"/>
-    </div>`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2">
+      <h6 class="weather-forecast-date">${formatDay(forecastDay.dt)}</h6>
+      <span class="weather-forecast-temperature-max">${Math.round(
+        forecastDay.temp.max
+      )}° </span>
+        / 
+        <span class="weather-forecast-temperature-min">
+        ${Math.round(forecastDay.temp.min)}°</span>
+        <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" alt="" width="42px"/>
+        </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -157,4 +170,3 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let celsiusTemperature = null;
 
 searchCity("New York");
-displayForecast();
