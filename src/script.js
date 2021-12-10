@@ -117,8 +117,6 @@ function handleSubmit(event) {
 }
 
 function showPosition(position) {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
   let apiKey = "65b5662e22ff1bb3952c072792011a99";
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;

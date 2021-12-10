@@ -38,19 +38,14 @@ p {
   margin: 5px 0;
 }
 .city-temperature {
-  font-size: 40px;
+  font-size: 48px;
   padding: 0%;
+  position: relative;
+  top: -8px;
 }
 .units {
   position: relative;
-  top: -16px;
-}
-.units .active {
-  color: rgb(4, 163, 255);
-  cursor: default;
-}
-.units .active:hover {
-  text-decoration: none;
+  top: -30px;
 }
 #weather-description {
   text-transform: capitalize;
