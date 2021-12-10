@@ -55,6 +55,9 @@ p {
 #weather-description {
   text-transform: capitalize;
 }
+.weather-forecast-temperature-min {
+  opacity: 0.7;
+}
 .icon {
   text-align: center;
 }
