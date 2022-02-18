@@ -1,5 +1,5 @@
 body {
-  color: rgb(4, 163, 255);
+  color: #475053;
 }
 h1 {
   font-size: 48px;
@@ -17,24 +17,28 @@ p {
   max-width: 600px;
 }
 .card {
+  background-color: #f0fbff;
   padding: 25px;
   border: 1px solid black;
 }
-.btn-success {
-  background-color: rgb(100, 149, 237);
+.btn-primary {
+  background-color: #2e94b9 !important;
+}
+.btn-outline-primary {
+  opacity: 0.8;
 }
 .btn:hover {
   transition: all 200ms ease;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #2e94b9;
+  border-color: #2e94b9;
 }
 .col-2 {
-  color: black;
+  color: #475053;
   text-align: center;
   width: 19.67%;
 }
 .current-date {
-  color: black;
+  color: #475053;
   margin: 5px 0;
 }
 .city-temperature {
@@ -51,7 +55,7 @@ p {
   text-transform: capitalize;
 }
 .weather-forecast-temperature-min {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .icon {
   text-align: center;
